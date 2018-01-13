@@ -1,0 +1,1 @@
+python test_x.py --dataroot ./datasets/canny_edge_HD --name canny_edge_HD --model frame_interpolator --which_model_netG unet_256 --which_direction BtoA --dataset_mode aligned --norm batch

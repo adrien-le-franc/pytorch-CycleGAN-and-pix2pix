@@ -140,10 +140,10 @@ class Pix2PixModel(BaseModel):
                             ])
 
     def get_current_visuals(self):
-        real_A = util.tensor2im(self.real_A.data)
+        real_AC = util.tensor2im(self.real_A.data*0.5 + self.real_C.data*0.5)
         fake_B = util.tensor2im(self.fake_B.data)
         real_B = util.tensor2im(self.real_B.data)
-        return OrderedDict([('real_A', real_A), ('fake_B', fake_B), ('real_B', real_B)])
+        return OrderedDict([('real_A', real_AC), ('fake_B', fake_B), ('real_B', real_B)]) ### change
 
     def save(self, label):
         self.save_network(self.netG, 'G', label, self.gpu_ids)

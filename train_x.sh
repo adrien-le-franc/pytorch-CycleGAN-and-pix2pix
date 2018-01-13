@@ -1,0 +1,1 @@
+python train_x.py --dataroot ./datasets/american_dad --name american_dad --model frame_interpolator --which_model_netG unet_256 --which_direction BtoA --lambda_A 100 --dataset_mode aligned --no_lsgan --norm batch --pool_size 0 --dataset_mode abc_aligned

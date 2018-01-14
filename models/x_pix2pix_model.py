@@ -47,7 +47,7 @@ class Pix2PixModel(BaseModel):
             self.criterionL1 = torch.nn.L1Loss()
 
             ### x 
-            self.criterionSSIM = xx_msssim.SSIM()
+            self.criterionSSIM = x_ssim.SSIM()
 
             # initialize optimizers
             self.schedulers = []
